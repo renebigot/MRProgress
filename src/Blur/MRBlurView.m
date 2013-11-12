@@ -76,7 +76,7 @@
 - (void)redraw {
     __block UIImage *image = self.snapshot;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        image = [image mr_applyBlurWithRadius:30.0 tintColor:[UIColor colorWithWhite:0.97 alpha:0.82] saturationDeltaFactor:1.0 maskImage:nil];
+//        image = [image mr_applyBlurWithRadius:30.0 tintColor:[UIColor colorWithWhite:0.97 alpha:0.82] saturationDeltaFactor:1.0 maskImage:nil];
         dispatch_async(dispatch_get_main_queue(), ^{
             if (self.image) {
                 // Fade on content's change, if there was already an image.
